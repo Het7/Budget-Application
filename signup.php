@@ -401,7 +401,7 @@ session_start();
 			 	<h2 class="title">Signup</h2>
 	      <form method="post">
 	         <input type="text" name="user_name" class="input-box" placeholder="Username">
-	         <input type="text" name="email" class="input-box" placeholder="Email">
+	         <input type="email" name="email" class="input-box" placeholder="Email">
 	         <input type="password" name="password" class="input-box" placeholder="Enter Password">
 	         <input id="button" type="submit" name="login-btn" class="btn" value="Signup">
 	      </form>
