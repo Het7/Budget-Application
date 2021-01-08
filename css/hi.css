@@ -1,0 +1,299 @@
+*{
+  font-family: Tahoma !important;
+}
+
+body{
+    font-size: 18px;
+    background-color: #eae6e6;
+}
+
+.info {
+  margin-top: 300px;
+  margin-left: 30px;
+  position: fixed;
+  font-weight: 50px;
+}
+
+.num {
+  font-weight: 400;
+}
+
+
+#deletesuccess {
+      margin: 30px auto;
+      padding: 10px;
+      border-radius: 5px;
+      color: #3c763d;
+      background: #dff0d8;
+      width: 50%;
+      text-align: center;
+      position: fixed;
+      top: 47px;
+      left: 0;
+      right: 0;
+      z-index: 7000;
+}
+
+#left-form{
+  margin-left: -5px;
+  margin-top: 150px;
+}
+
+.form input {
+    min-width: 400px;
+    display: block;
+    margin: 10px;
+    padding: 15px 20px;
+    background-color: #ece7e7;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    box-shadow: 15px 15px 25px #a8a8a8;
+    transition: box-shadow 0.5s;
+}
+
+.form input:focus {
+    box-shadow: 5px 5px 15px #a8a8a8;
+}
+
+.form .btn {
+    margin: auto;
+    padding: 10px 35px;
+    background-color: #f1a566;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 25px #a8a8a8;
+    transition: box-shadow 0.5s;
+    outline: none;
+    margin-left: 11px;
+}
+
+.form .btn:hover {
+    box-shadow: 5px 5px 15px #aaa;
+}
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin-left: 800px !important;
+  margin-top: -250px !important;
+}
+
+.content-table thead tr {
+  background-color: #c5d2cf;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px
+
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+:root {
+  --background: rgb(230, 249, 255);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* navigation styles start here */
+
+header {
+  background: var(--background);
+  font-weight: 500;
+  color: grey !important;
+  margin-left: -8px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  top: 0
+}
+
+/* changed this from the tutorial video to
+   allow it to gain focus, making it tabbable */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: grey;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+    margin-left: -100px !important;
+  }
+
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+
+
+
+
+@keyframes fade-in-element {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
