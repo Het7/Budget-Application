@@ -50,10 +50,24 @@ session_start();
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/newlogin.css"/>
+	<link rel="stylesheet" type="text/css" href="css/hi.css"/>
 </head>
 <body>
 
+	<header class="header">
+		 <h2 class="logo">Welcome <?php echo $name ?> to BudgetER</h2>
+		 <input type="checkbox" id="nav-toggle" class="nav-toggle">
+		 <nav>
+				<ul>
+
+					 <li><a href="signup.php">Get Started</a></li>
+				</ul>
+		 </nav>
+		 <label for="nav-toggle" class="nav-toggle-label">
+		 <span></span>
+		 </label>
+	</header>
 
 <p> Make all the right money moves. Get a complete view of your
 	<br>income, bills and transactions in one place. BudgetER helps
