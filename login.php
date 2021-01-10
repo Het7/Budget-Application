@@ -51,7 +51,7 @@ session_start();
    <head>
       <title></title>
       <link rel="stylesheet" type="text/css" href="css/newlogin.css"/>
-      <link rel="stylesheet" type="text/css" href="css/hi.css"/>
+      <link rel="stylesheet" type="text/css" href="css/header.css"/>
    </head>
    <body>
       <header class="header">
