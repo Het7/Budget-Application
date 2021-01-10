@@ -58,8 +58,34 @@ session_start();
                <span></span>
                </label>
             </div>
-            <input type="number" step="0.01" name="amount" class="input-box" placeholder="43" required>
-            <input type="text" name="description" class="input-box" placeholder="Shoes" required>
+            <input type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
+						<input type="text" name="description" class="input-box" placeholder="Description" required>
+
+<div class="select">
+						<select name="category" id="format" required>
+							<option value=""> Select Category</option>
+							<option value="Housing"> Housing</option>
+							<option value="Transportation"> Transportation</option>
+							<option value="Food"> Food</option>
+							<option value="Utilities"> Utilities</option>
+							<option value="Medical/Healthcare"> Medical/Healthcare</option>
+							<option value="Insurance"> Insurance</option>
+							<option value="Personal"> Personal</option>
+							<option value="Education"> Education</option>
+							<option value="Gifts/Donations"> Gifts/Donations</option>
+							<option value="Entertainment"> Entertainment</option>
+						</select>
+					</div>
+
+
+
+
+
+
+
+
+
+
             <input type="submit" name="submit" class="btn" value="Submit" onclick="addedSuccess()">
          </form>
       </div>
@@ -69,6 +95,7 @@ session_start();
                <th>Cashflow</th>
                <th>Amount</th>
                <th>Description</th>
+							 <th>Category</th>
             </tr>
          </thead>
          <tbody>
