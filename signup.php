@@ -34,8 +34,8 @@ session_start();
 <html>
 <head>
 	<title>Signup</title>
-	<link rel="stylesheet" type="text/css" href="css/nsignup.css"/>
-	<link rel="stylesheet" type="text/css" href="css/hi.css"/>
+	<link rel="stylesheet" type="text/css" href="css/signup.css"/>
+	<link rel="stylesheet" type="text/css" href="css/header.css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -66,10 +66,10 @@ session_start();
 	   <div id="left-form" class="form fade-in-element">
 
 	      <form method="post">
-	         <input type="text" name="user_name" class="input-box" placeholder="Username" required>
-	         <input type="email" name="email" class="input-box" placeholder="Email" required>
-	         <input type="password" name="password" class="input-box" placeholder="Enter Password" required>
-	         <input id="button" type="submit" name="login-btn" class="btn" value="Signup" required>
+	         <input type="text" name="user_name" class="input-box" placeholder="Username">
+	         <input type="text" name="email" class="input-box" placeholder="Email">
+	         <input type="password" name="password" class="input-box" placeholder="Enter Password">
+	         <input id="button" type="submit" name="login-btn" class="btn" value="Signup">
 	      </form>
 
 	   </div>

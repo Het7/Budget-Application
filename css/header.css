@@ -219,6 +219,20 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+.radio-group {
+    margin: none;
+    padding: 100px 35px;
+    background-color: #f1a566;
+    color: #fff;
+    border: none;
+    font-size: 22px;
+    border-radius: 10px;
+    box-shadow: 15px 15px 25px #a8a8a8;
+    transition: box-shadow 0.5s;
+    outline: none;
+    margin-left: 11px;
+}
+
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;

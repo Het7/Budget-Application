@@ -14,7 +14,7 @@ session_start();
 <!DOCTYPE html>
 <html>
    <head>
-      <link rel="stylesheet" type="text/css" href="css/hi.css"/>
+      <link rel="stylesheet" type="text/css" href="css/style.css"/>
    </head>
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
    <script type="text/javascript">
@@ -54,8 +54,26 @@ session_start();
 
       <div id="left-form" class="form fade-in-element">
          <form action="info.php" method="post">
-           <input type="hidden" name="id" value="<?php echo $num; ?>">
-            <input type="text" name="cashflow" class="input-box" placeholder="Income/Expense" required>
+
+         	<div class="radio-group">
+
+         		<label class="radio">
+         			<input type="radio" value="Income" name="cashflow">Income
+         			<span></span>
+         		</label>
+
+         		<label class="radio">
+         			<input type="radio" value="Expense" name="cashflow">Expense
+         			<span></span>
+         		</label>
+         	</div>
+           
+            
+
+
+            
+
+
             <input type="number" step="0.01" name="amount" class="input-box" placeholder="43" required>
             <input type="text" name="description" class="input-box" placeholder="Shoes" required>
             <input type="submit" name="submit" class="btn" value="Submit" onclick="addedSuccess()">
