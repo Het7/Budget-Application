@@ -6,8 +6,6 @@ session_start();
 
 	$user_data = check_login($con);
   $name = $user_data['user_name'];
-
-
 ?>
 
 
@@ -23,18 +21,16 @@ session_start();
       });
    </script>
    <body>
-
-     <div class="info">
-       <p> Your income is <?php echo $_SESSION['Income']; ?></p>
-       <p> Your expense is <span > <?php echo $_SESSION['Expense']; ?> </span> </p>
-       <p> Your net balance is <span> <?php echo $_SESSION['total']; ?> </span> </p>
-   </div>
+      <div class="info">
+         <p> Your income is <?php echo $_SESSION['Income']; ?></p>
+         <p> Your expense is <span > <?php echo $_SESSION['Expense']; ?> </span> </p>
+         <p> Your net balance is <span> <?php echo $_SESSION['total']; ?> </span> </p>
+      </div>
       <header class="header">
          <h2 class="logo">Welcome <?php echo $name ?> to the Dashboard</h2>
          <input type="checkbox" id="nav-toggle" class="nav-toggle">
          <nav>
             <ul>
-
                <li><a href="logout.php">Logout</a></li>
             </ul>
          </nav>
@@ -42,7 +38,6 @@ session_start();
          <span></span>
          </label>
       </header>
-
       <?php if (isset($_SESSION['msg'])): ?>
       <div id=deletesuccess>
          <?php
@@ -51,35 +46,23 @@ session_start();
             ?>
       </div>
       <?php endif ?>
-
       <div id="left-form" class="form fade-in-element">
          <form action="info.php" method="post">
-
-         	<div class="radio-group">
-
-         		<label class="radio">
-         			<input type="radio" value="Income" name="cashflow">Income
-         			<span></span>
-         		</label>
-
-         		<label class="radio">
-         			<input type="radio" value="Expense" name="cashflow">Expense
-         			<span></span>
-         		</label>
-         	</div>
-           
-            
-
-
-            
-
-
+            <div class="radio-group">
+               <label class="radio">
+               <input type="radio" value="Income" name="cashflow" required>Income
+               <span></span>
+               </label>
+               <label class="radio">
+               <input type="radio" value="Expense" name="cashflow">Expense
+               <span></span>
+               </label>
+            </div>
             <input type="number" step="0.01" name="amount" class="input-box" placeholder="43" required>
             <input type="text" name="description" class="input-box" placeholder="Shoes" required>
             <input type="submit" name="submit" class="btn" value="Submit" onclick="addedSuccess()">
          </form>
       </div>
-
       <table class="content-table">
          <thead>
             <tr>
@@ -92,7 +75,5 @@ session_start();
             <?php include_once('data.php'); ?>
          </tbody>
       </table>
-
-
    </body>
 </html>
