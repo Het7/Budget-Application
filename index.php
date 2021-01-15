@@ -12,7 +12,7 @@ session_start();
 <!DOCTYPE html>
 <html>
    <head>
-      <link rel="stylesheet" type="text/css" href="css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
    </head>
    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
    <script type="text/javascript">
@@ -32,6 +32,7 @@ session_start();
          <nav>
             <ul>
                <li><a href="logout.php">Logout</a></li>
+							 <li><a href="pie.php">Data</a></li>
             </ul>
          </nav>
          <label for="nav-toggle" class="nav-toggle-label">
@@ -62,7 +63,7 @@ session_start();
 						<input type="text" name="description" class="input-box" placeholder="Description" required>
 
 <div class="select">
-						<select name="category" id="format" required>
+						<select name="category" id="format">
 							<option value=""> Select Category</option>
 							<option value="Housing"> Housing</option>
 							<option value="Transportation"> Transportation</option>
@@ -77,15 +78,6 @@ session_start();
 						</select>
 					</div>
 
-
-
-
-
-
-
-
-
-
             <input type="submit" name="submit" class="btn" value="Submit" onclick="addedSuccess()">
          </form>
       </div>
@@ -96,6 +88,7 @@ session_start();
                <th>Amount</th>
                <th>Description</th>
 							 <th>Category</th>
+							 <th>Date</th>
             </tr>
          </thead>
          <tbody>

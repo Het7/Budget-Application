@@ -19,7 +19,7 @@ $resultCheck = mysqli_num_rows($output);
 
 if ($resultCheck > 0)  {
   while ($data = mysqli_fetch_assoc($output)) {
-  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ;
+  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ."</td><td>". $data['date'];
   }
 }
 

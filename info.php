@@ -4,12 +4,13 @@ ini_set('display_errors', '1'); ini_set('display_startup_errors', '1'); error_re
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-include("connection.php");
-include("functions.php");
+include_once("connection.php");
+include_once("functions.php");
 
 
 $user_data = check_login($con);
 $name = $user_data['user_name'];
+$_SESSION['name'] = $name;
 
 
 
