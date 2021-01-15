@@ -19,7 +19,7 @@ $id=$row["id"];
 
 <html>
   <head>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
 		<link rel="stylesheet" type="text/css" href="css/pie.css"/>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
