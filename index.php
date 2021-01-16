@@ -31,8 +31,8 @@ session_start();
          <input type="checkbox" id="nav-toggle" class="nav-toggle">
          <nav>
             <ul>
-               <li><a href="logout.php">Logout</a></li>
-							 <li><a href="pie.php">Data</a></li>
+							
+              <li><a href="logout.php">Logout</a></li>
             </ul>
          </nav>
          <label for="nav-toggle" class="nav-toggle-label">
