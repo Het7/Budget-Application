@@ -78,10 +78,10 @@ session_start();
          <div id="left-form" class="form fade-in-element">
             <h2>Login</h2>
             <form method="post">
-               <input type="text" name="user_name" class="input-box" placeholder="Username">
-               <input type="password" name="password" class="input-box" placeholder="Enter Password">
+               <input type="text" name="user_name" class="input-box" placeholder="Username" required>
+               <input type="password" name="password" class="input-box" placeholder="Enter Password" required>
                <input type="submit" name="login-btn" class="btn" value="Login">
-							 <a href="forgot-password.php">Forgot Password?</a>
+		<a href="forgot-password.php">Forgot Password?</a>
             </form>
          </div>
       </section>
