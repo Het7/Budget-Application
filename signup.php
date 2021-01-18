@@ -60,9 +60,9 @@
       <section class="left-section">
          <div id="left-form" class="form fade-in-element">
             <form method="post">
-               <input type="text" name="user_name" class="input-box" placeholder="Username">
-               <input type="text" name="email" class="input-box" placeholder="Email">
-               <input type="password" name="password" class="input-box" placeholder="Enter Password" minlength="7">
+               <input type="text" name="user_name" class="input-box" placeholder="Username" required>
+               <input type="text" name="email" class="input-box" placeholder="Email" required>
+               <input type="password" name="password" class="input-box" placeholder="Enter Password" required minlength="7">
                <input id="button" type="submit" name="login-btn" class="btn" value="Signup">
             </form>
          </div>
