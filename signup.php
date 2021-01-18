@@ -62,7 +62,8 @@
             <form method="post">
                <input type="text" name="user_name" class="input-box" placeholder="Username" required>
                <input type="email" name="email" class="input-box" placeholder="Email" required>
-               <input type="password" name="password" class="input-box" placeholder="Enter Password" required minlength="7">
+               <input type="password" name="password" class="input-box" placeholder="Enter Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+  		title="Must contain at least one  number and one uppercase and lowercase letter, and at least 7 or more characters">
                <input id="button" type="submit" name="login-btn" class="btn" value="Signup">
             </form>
          </div>
