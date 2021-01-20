@@ -64,7 +64,7 @@ session_start();
 
 <div class="select">
 						<select name="category" id="format">
-							<option value=""> Select Category</option>
+							<option value="">Select Expense Category</option>
 							<option value="Housing"> Housing</option>
 							<option value="Transportation"> Transportation</option>
 							<option value="Food"> Food</option>
