@@ -83,8 +83,8 @@ body{
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-left: 630px !important;
-  margin-top: -250px !important;
+  margin-left: 520px !important;
+  margin-top: -280px !important;
 }
 
 .content-table thead tr {
@@ -336,7 +336,7 @@ select::-ms-expand {
 .chat_icon{
   position: fixed;
   right: 30px;
-  bottom: 100px;
+  bottom: 50px;
   font-size: 80px;
   color: black;
   cursor: pointer;

@@ -19,12 +19,12 @@ $resultCheck = mysqli_num_rows($output);
 
 if ($resultCheck > 0)  {
   while ($data = mysqli_fetch_assoc($output)) {
-  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ."</td><td>". $data['date'];
+  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ."</td>";
   }
 }
 
 else{
-  echo "<p style= 'margin: auto;'> No data has been inputed yet! </p>";
+  //echo "<p style= 'margin: auto;'> No data has been inputed yet! </p>";
 }
 
 

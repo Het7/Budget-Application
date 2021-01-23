@@ -12,10 +12,9 @@ session_start();
 <!DOCTYPE html>
 <html>
    <head>
+		 <script src="https://kit.fontawesome.com/593e22ddf2.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
-			<link rel="stylesheet" href="css/all.css">
 			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-			<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 			<script type="text/javascript" src="js/custom.js"></script>
 			<link rel="stylesheet" href="css/cb.css">
 
@@ -31,12 +30,12 @@ session_start();
 
 		 <!-- ChatBot -->
 <div class="chat_icon">
-	<i class="fa fa-comments" aria-hidden="true"></i>
+	<i class="fas fa-question"></i>
 </div>
 
 <div class="chat_box">
 	<div class="wrapper">
-		<div class="title">Simple Online Chatbot</div>
+		<div class="title">BudgetBot Help!</div>
 		<div class="cb-form">
 				<div class="bot-inbox inbox">
 						<div class="icon">
@@ -44,6 +43,14 @@ session_start();
 						</div>
 						<div class="msg-header">
 								<p>Hello there, how can I help you?</p>
+						</div>
+				</div>
+				<div class="bot-inbox inbox">
+						<div class="icon">
+								<i class="fas fa-user"></i>
+						</div>
+						<div class="msg-header">
+								<p>Do you want to know your income, expense, and/or net-income?</p>
 						</div>
 				</div>
 		</div>
@@ -121,7 +128,7 @@ session_start();
                <th>Amount</th>
                <th>Description</th>
                <th>Category</th>
-               <th>Date</th>
+
             </tr>
          </thead>
          <tbody>

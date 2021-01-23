@@ -21,7 +21,7 @@ $outputIncome = mysqli_fetch_array($outIncome);
 $totalIncome = $outputIncome['totalI'];
 $_SESSION['Income'] = $totalIncome;
 if (empty($totalIncome)) {
-    $_SESSION['Income'] = "$0.00";
+    $_SESSION['Income'] = "0.00";
 }
 
 else {
@@ -35,7 +35,7 @@ $outputExpense = mysqli_fetch_array($outExpense);
 $totalExpense = $outputExpense['totalE'];
 if (empty($totalExpense)) {
 
-    $_SESSION['Expense'] = "$0.00";
+    $_SESSION['Expense'] = "0.00";
 }
 
 else {
@@ -46,7 +46,7 @@ else {
 $total = $totalIncome - $totalExpense;
 if (empty($totalExpense) && empty($totalIncome)) {
 
-    $_SESSION['total'] = "$0.00";
+    $_SESSION['total'] = "0.00";
 }
 
 else {
@@ -73,16 +73,16 @@ if(mysqli_num_rows($run_query) > 0){
     //storing replay to a varible which we'll send to ajax
     $replay = $fetch_data['replies'];
     echo $replay;
-} elseif (str_contains($getMesg, 'income')) {
-  echo $_SESSION['Income'];
-} elseif (str_contains($getMesg, 'expense')) {
-  echo $_SESSION['Expense'];
-} elseif (str_contains($getMesg, 'total')) {
-  echo $_SESSION['total'];
+} elseif (str_contains(strtolower($getMesg), 'income')) {
+    echo $name. ", your total income is $". $_SESSION['Income'];
+} elseif (str_contains(strtolower($getMesg), 'expense')) {
+  echo $name. ", your total expense is $". $_SESSION['Expense'];
+} elseif (str_contains(strtolower($getMesg), 'total')) {
+  echo $name. ", your net-income is $". $_SESSION['total'];
 }
 
 else{
-    echo "Sorry can't be able to understand you!";
+    echo "Sorry I didn't understand that! I can help you figure out your income, expense, and net income.";
 }
 
 ?>
