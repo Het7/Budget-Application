@@ -12,7 +12,7 @@ session_start();
 <!DOCTYPE html>
 <html>
    <head>
-		 <script src="https://kit.fontawesome.com/593e22ddf2.js" crossorigin="anonymous"></script>
+		 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
       <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
 			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 			<script type="text/javascript" src="js/custom.js"></script>
