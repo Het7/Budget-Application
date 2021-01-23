@@ -1,32 +1,18 @@
+<!-- Created By CodingNepal -->
 <?php
+session_start();
+// connecting to database
+//include_once("data.php");
 include_once('connection.php');
+include("functions.php");
+
 
 $user_data = check_login($con);
 $name = $user_data['user_name'];
-
-
-
-
 $query = "SELECT * FROM users WHERE user_name='$name'";
 $result = mysqli_query($con,$query);
 $row=mysqli_fetch_array($result);
 $id=$row["id"];
-
-
-$stmt = "SELECT * FROM info WHERE user_id='$id';";
-$output = mysqli_query($con, $stmt);
-$resultCheck = mysqli_num_rows($output);
-
-if ($resultCheck > 0)  {
-  while ($data = mysqli_fetch_assoc($output)) {
-  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ."</td><td>". $data['date'];
-  }
-}
-
-else{
-  echo "<p style= 'margin: auto;'> No data has been inputed yet! </p>";
-}
-
 
 
 $sumIncome = "SELECT SUM(amount) AS `totalI` FROM info WHERE cashflow='income' AND cashflow='Income' AND user_id='$id'";
@@ -68,5 +54,35 @@ else {
 }
 
 
+// getting user message through ajax
+$getMesg = mysqli_real_escape_string($con, $_POST['text']);
+
+/*if (str_contains($getMesg, 'expense')) {
+  echo "true";
+}
+*/
+
+//checking user query to database query
+$check_data = "SELECT replies FROM chatbot WHERE queries LIKE '%$getMesg%'";
+$run_query = mysqli_query($con, $check_data) or die("Error");
+
+// if user query matched to database query we'll show the reply otherwise it go to else statement
+if(mysqli_num_rows($run_query) > 0){
+    //fetching replay from the database according to the user query
+    $fetch_data = mysqli_fetch_assoc($run_query);
+    //storing replay to a varible which we'll send to ajax
+    $replay = $fetch_data['replies'];
+    echo $replay;
+} elseif (str_contains($getMesg, 'income')) {
+  echo $_SESSION['Income'];
+} elseif (str_contains($getMesg, 'expense')) {
+  echo $_SESSION['Expense'];
+} elseif (str_contains($getMesg, 'total')) {
+  echo $_SESSION['total'];
+}
+
+else{
+    echo "Sorry can't be able to understand you!";
+}
 
 ?>

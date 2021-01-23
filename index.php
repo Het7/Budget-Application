@@ -13,26 +13,59 @@ session_start();
 <html>
    <head>
       <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
+			<link rel="stylesheet" href="css/all.css">
+			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+			<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+			<script type="text/javascript" src="js/custom.js"></script>
+			<link rel="stylesheet" href="css/cb.css">
+
    </head>
-   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
    <script type="text/javascript">
       $(document).ready( function() {
         $('#deletesuccess').delay(1300).fadeOut();
       });
    </script>
    <body>
-      <div class="info">
-         <p> Your income is <?php echo $_SESSION['Income']; ?></p>
-         <p> Your expense is <span > <?php echo $_SESSION['Expense']; ?> </span> </p>
-         <p> Your net balance is <span> <?php echo $_SESSION['total']; ?> </span> </p>
-      </div>
+
+
+		 <!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="wrapper">
+		<div class="title">Simple Online Chatbot</div>
+		<div class="cb-form">
+				<div class="bot-inbox inbox">
+						<div class="icon">
+								<i class="fas fa-user"></i>
+						</div>
+						<div class="msg-header">
+								<p>Hello there, how can I help you?</p>
+						</div>
+				</div>
+		</div>
+		<div class="typing-field">
+				<div class="input-data">
+						<input id="data" type="text" placeholder="Type something here.." required>
+						<button id="send-btn">Send</button>
+				</div>
+		</div>
+</div>
+
+</div>
+<!-- ChatBot end -->
+
+
+
       <header class="header">
          <h2 class="logo">Welcome <?php echo $name ?> to the Dashboard</h2>
          <input type="checkbox" id="nav-toggle" class="nav-toggle">
          <nav>
             <ul>
-							
-              <li><a href="logout.php">Logout</a></li>
+               <li><a href="logout.php">Logout</a></li>
             </ul>
          </nav>
          <label for="nav-toggle" class="nav-toggle-label">
@@ -47,6 +80,8 @@ session_start();
             ?>
       </div>
       <?php endif ?>
+
+
       <div id="left-form" class="form fade-in-element">
          <form action="info.php" method="post">
             <div class="radio-group">
@@ -59,26 +94,24 @@ session_start();
                <span></span>
                </label>
             </div>
-            <input type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
-						<input type="text" name="description" class="input-box" placeholder="Description" required>
-
-<div class="select">
-						<select name="category" id="format">
-							<option value=""> Select Category</option>
-							<option value="Housing"> Housing</option>
-							<option value="Transportation"> Transportation</option>
-							<option value="Food"> Food</option>
-							<option value="Utilities"> Utilities</option>
-							<option value="Medical/Healthcare"> Medical/Healthcare</option>
-							<option value="Insurance"> Insurance</option>
-							<option value="Personal"> Personal</option>
-							<option value="Education"> Education</option>
-							<option value="Gifts/Donations"> Gifts/Donations</option>
-							<option value="Entertainment"> Entertainment</option>
-						</select>
-					</div>
-
-            <input type="submit" name="submit" class="btn" value="Submit" onclick="addedSuccess()">
+            <input id="amount" type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
+            <input type="text" name="description" class="input-box" placeholder="Description" required>
+            <div class="select">
+               <select name="category" id="format">
+                  <option value="">Select Expense Category</option>
+                  <option value="Housing"> Housing</option>
+                  <option value="Transportation"> Transportation</option>
+                  <option value="Food"> Food</option>
+                  <option value="Utilities"> Utilities</option>
+                  <option value="Medical/Healthcare"> Medical/Healthcare</option>
+                  <option value="Insurance"> Insurance</option>
+                  <option value="Personal"> Personal</option>
+                  <option value="Education"> Education</option>
+                  <option value="Gifts/Donations"> Gifts/Donations</option>
+                  <option value="Entertainment"> Entertainment</option>
+               </select>
+            </div>
+            <input type="submit" name="submit" id="info-submit" class="btn" value="Submit" onclick="addedSuccess()">
          </form>
       </div>
       <table class="content-table">
@@ -87,13 +120,15 @@ session_start();
                <th>Cashflow</th>
                <th>Amount</th>
                <th>Description</th>
-							 <th>Category</th>
-							 <th>Date</th>
+               <th>Category</th>
+               <th>Date</th>
             </tr>
          </thead>
          <tbody>
             <?php include_once('data.php'); ?>
          </tbody>
       </table>
+
+
    </body>
 </html>

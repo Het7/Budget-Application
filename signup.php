@@ -1,10 +1,6 @@
 <?php
-
-
 	include("connection.php");
 	include("functions.php");
-
-
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
 	{
@@ -15,7 +11,6 @@
 
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
-
 			//save to database
 			$user_id = random_num(20);
 			$query = "insert into users (user_id,user_name,password, email) values ('$user_id','$user_name','$password', '$email')";
@@ -24,7 +19,7 @@
 
 			header("Location: login.php");
 			die;
-		}else
+		} else
 		{
 			echo "Please enter some valid information!";
 		}
@@ -60,9 +55,10 @@
       <section class="left-section">
          <div id="left-form" class="form fade-in-element">
             <form method="post">
-               <input type="text" name="user_name" class="input-box" placeholder="Username">
-               <input type="text" name="email" class="input-box" placeholder="Email">
-               <input type="password" name="password" class="input-box" placeholder="Enter Password">
+               <input type="text" name="user_name" class="input-box" placeholder="Username" required>
+               <input type="email" name="email" class="input-box" placeholder="Email" required>
+               <input type="password" name="password" class="input-box" placeholder="Enter Password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,}"
+  		title="Must contain at least one number, one uppercase and lowercase letter, and at least 7 or more characters">
                <input id="button" type="submit" name="login-btn" class="btn" value="Signup">
             </form>
          </div>

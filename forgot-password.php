@@ -28,7 +28,7 @@
           $mail->Host       = 'smtp.gmail.com';                  // Set the SMTP server to send through
           $mail->SMTPAuth   = true;                             // Enable SMTP authentication
           $mail->Username   = 'noreplybudgeter@gmail.com';     // SMTP username
-          $mail->Password   = '';                             // SMTP password, not included for privacy
+          $mail->Password   = 'viratkohli1234';                             // SMTP password, not included for privacy
           $mail->SMTPSecure = 'tls';          				 // Enable TLS encryption
           $mail->Port       = 587;                          // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
@@ -72,7 +72,6 @@
          <nav>
             <ul>
               <li><a href="login.php">Login</a></li>
-              <li><a href="logout.php">Logout</a></li>
             </ul>
          </nav>
          <label for="nav-toggle" class="nav-toggle-label">
