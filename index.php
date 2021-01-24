@@ -102,7 +102,7 @@ session_start();
                </label>
             </div>
             <input id="amount" type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
-            <input type="text" name="description" class="input-box" placeholder="Description" required>
+            <input type="text" name="description" class="input-box" placeholder="Description">
             <div class="select">
                <select name="category" id="format">
                   <option value="">Select Expense Category</option>
