@@ -77,7 +77,7 @@ if(mysqli_num_rows($run_query) > 0){
     echo $name. ", your total income is $". $_SESSION['Income'];
 } elseif (str_contains(strtolower($getMesg), 'expense')) {
   echo $name. ", your total expense is $". $_SESSION['Expense'];
-} elseif (str_contains(strtolower($getMesg), 'total')) {
+} elseif (str_contains(strtolower($getMesg), 'net-income')) {
   echo $name. ", your net-income is $". $_SESSION['total'];
 }
 
