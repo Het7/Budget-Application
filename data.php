@@ -19,7 +19,9 @@ $resultCheck = mysqli_num_rows($output);
 
 if ($resultCheck > 0)  {
   while ($data = mysqli_fetch_assoc($output)) {
-  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'] ."</td>";
+  echo "<tr><td>". $data["cashflow"] ."</td><td>". $data["amount"] ."</td><td>". $data["description"] ."</td><td>". $data['category'];
+  echo "</td><td><a href='edit.php?eid=".$data['id']."'>Edit</a> |
+     <a href='delete.php?did=".$data['id']."'>Delete</a></td>";
   }
 }
 

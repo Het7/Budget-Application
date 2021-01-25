@@ -128,6 +128,7 @@ session_start();
                <th>Amount</th>
                <th>Description</th>
                <th>Category</th>
+							 <th>Action</th>
 
             </tr>
          </thead>
