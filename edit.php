@@ -10,8 +10,26 @@ $edata = mysqli_fetch_array($eq);
 
 
  <html>
+ <head>
+   <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
+ </head>
  <body>
 
+   <header class="header">
+      <h2 class="logo">Edit your entry here!</h2>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+         <ul>
+            <li><a href="index.php">Dashboard</a></li>
+            <li><a href="logout.php">Logout</a></li>
+         </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+      <span></span>
+      </label>
+   </header>
+
+<div id="left-form" class="form fade-in-element">
    <form method="post">
      <input type="hidden" class="input-box" value="<?php echo $edata['id']; ?>">
 
@@ -59,8 +77,9 @@ $edata = mysqli_fetch_array($eq);
             <option value="Entertainment"> Entertainment</option>
          </select>
       </div>
-      <input type="submit" name="submit" id="info-submit" class="btn" value="Submit" onclick="addedSuccess()">
+      <input type="submit" name="submit" id="info-submit" class="btn" value="Update" onclick="editSuccess()">
    </form>
+ </div>
  </body>
  </html>
 

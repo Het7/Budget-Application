@@ -4,6 +4,7 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
+
 	$user_data = check_login($con);
   $name = $user_data['user_name'];
 ?>
@@ -12,7 +13,7 @@ session_start();
 <!DOCTYPE html>
 <html>
    <head>
-		 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+		 <script src="https://kit.fontawesome.com/593e22ddf2.js" crossorigin="anonymous"></script>
       <link rel="stylesheet" type="text/css" href="css/newStyle.css"/>
 			<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 			<script type="text/javascript" src="js/custom.js"></script>
@@ -25,6 +26,16 @@ session_start();
         $('#deletesuccess').delay(1300).fadeOut();
       });
    </script>
+
+
+	 <script type="text/javascript">
+			$(document).ready( function() {
+				$('#editsuccess').delay(1300).fadeOut();
+			});
+	 </script>
+
+
+
    <body>
 
 
@@ -102,7 +113,7 @@ session_start();
                </label>
             </div>
             <input id="amount" type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
-            <input type="text" name="description" class="input-box" placeholder="Description">
+            <input type="text" name="description" class="input-box" placeholder="Description" required>
             <div class="select">
                <select name="category" id="format">
                   <option value="">Select Expense Category</option>
