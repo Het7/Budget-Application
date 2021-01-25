@@ -81,8 +81,9 @@ session_start();
                <input type="text" name="user_name" class="input-box" placeholder="Username" required>
                <input type="password" name="password" class="input-box" placeholder="Enter Password" required>
                <input type="submit" name="login-btn" class="btn" value="Login">
-		<a href="forgot-password.php">Forgot Password?</a>
+
             </form>
+						<h7 class="forgot-pass"><a href="forgot-password.php">Forgot Password?</a></h7>
          </div>
       </section>
    </body>

@@ -9,16 +9,25 @@ body {
     background-color: #eae6e6;
 }
 
+.forgot-pass {
+  margin-right: 0px;
+  margin-bottom: 100px;
+}
+
+.forgot-pass a {
+  text-decoration: none;
+}
+
 p {
   text-align: center;
   margin-left: -700px;
-  margin-top: 280px;
+  margin-top: 270px;
   font-size: 20px;
   line-height: 1.5;
 }
 
 #left-form{
-  top: -20px;
+  top: 20px;
   left: 600px;
 }
 

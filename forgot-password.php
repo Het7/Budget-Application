@@ -40,7 +40,7 @@
           // Content
           $mail->isHTML(true);                                  // Set email format to HTML
           $mail->Subject = 'Forgot Password';
-          $mail->Body    = "Hi {$row['name']} your Password is {$row['password']}";
+          $mail->Body    = "Hey! Your password is {$row['password']}. This is an automated email, so please do not respond to this.";
           $mail->AltBody = "Hi $email your Password is {$row['password']}";
 
           $mail->send();
@@ -71,7 +71,7 @@
          <input type="checkbox" id="nav-toggle" class="nav-toggle">
          <nav>
             <ul>
-              <li><a href="login.php">Login</a></li>
+              <li><a href="login.php">Home</a></li>
             </ul>
          </nav>
          <label for="nav-toggle" class="nav-toggle-label">
@@ -83,9 +83,9 @@
       <section class="left-section">
 
          <div id="left-form" class="form fade-in-element">
-            <h2>Forgot Password</h2>
+            <h2 class="fp">Forgot Password</h2>
             <form method="post">
-               <input type="email" name="email" class="input-box" placeholder="Email">
+               <input type="email" name="email" class="input-box" placeholder="Enter Your Email">
                <input type="submit" name="login-btn" class="btn" value="Submit">
 
             </form>
