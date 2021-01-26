@@ -25,7 +25,7 @@ $amount = $_POST['amount'];
 $description = $_POST['description'];
 $category = $_POST['category'];
 
-$sql = "INSERT INTO info (cashflow, amount, description, category, user_id, date) VALUES ('$cashflow', '$amount', '$description', '$category', '$id', NOW());";
+$sql = "INSERT INTO info (cashflow, amount, description, category, user_id) VALUES ('$cashflow', '$amount', '$description', '$category', '$id');";
 
 mysqli_query($con, $sql);
 
