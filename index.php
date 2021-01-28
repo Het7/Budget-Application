@@ -61,7 +61,7 @@ session_start();
 								<i class="fas fa-user"></i>
 						</div>
 						<div class="msg-header">
-								<p>Do you want to know your income, expense, and/or net-income?</p>
+								<p>Do you want to know your income, expense, and/or total?</p>
 						</div>
 				</div>
 		</div>
