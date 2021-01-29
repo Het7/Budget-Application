@@ -99,7 +99,7 @@ session_start();
       </div>
       <?php endif ?>
 
-
+// INCOME AND EXPENSE DIFFERENT DROPDOWN MENU CREATE
       <div id="left-form" class="form fade-in-element">
          <form action="info.php" method="post">
             <div class="radio-group">
