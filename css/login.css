@@ -7,32 +7,6 @@ body{
     background-color: #eae6e6;
 }
 
-.info {
-  margin-top: 300px;
-  margin-left: 30px;
-  position: fixed;
-  font-weight: 50px;
-}
-
-.num {
-  font-weight: 400;
-}
-
-
-#deletesuccess {
-      margin: 30px auto;
-      padding: 10px;
-      border-radius: 5px;
-      color: #3c763d;
-      background: #dff0d8;
-      width: 50%;
-      text-align: center;
-      position: fixed;
-      top: 47px;
-      left: 0;
-      right: 0;
-      z-index: 7000;
-}
 
 .page {
   display: flex;
@@ -42,8 +16,6 @@ body{
   align-items: center;
   margin-top: 200px;
 }
-
-
 
 p {
   display: flex;
@@ -121,35 +93,6 @@ a:visited {
 
 .form .btn:hover {
     box-shadow: 5px 5px 15px #aaa;
-}
-
-.content-table {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  min-width: 400px;
-  border-radius: 5px 5px 0 0;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-  margin-left: 800px !important;
-  margin-top: -250px !important;
-}
-
-.content-table thead tr {
-  background-color: #c5d2cf;
-  color: #ffffff;
-  text-align: left;
-  font-weight: bold;
-}
-
-.content-table th,
-.content-table td {
-  padding: 12px 15px
-
-}
-
-.content-table tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
 }
 
 :root {
@@ -267,20 +210,6 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
-.radio-group {
-    margin: none;
-    padding: 100px 35px;
-    background-color: #f1a566;
-    color: #fff;
-    border: none;
-    font-size: 22px;
-    border-radius: 10px;
-    box-shadow: 15px 15px 25px #a8a8a8;
-    transition: box-shadow 0.5s;
-    outline: none;
-    margin-left: 11px;
-}
-
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
@@ -346,9 +275,6 @@ nav a:hover {
     transform: scale(1,1);
   }
 }
-
-
-
 
 @keyframes fade-in-element {
     from {
