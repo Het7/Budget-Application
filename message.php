@@ -66,7 +66,7 @@ $getMesg = mysqli_real_escape_string($con, $_POST['text']);
 $check_data = "SELECT replies FROM chatbot WHERE queries LIKE '%$getMesg%'";
 $run_query = mysqli_query($con, $check_data) or die("Error");
 
-// if the user query is matched to inputs in the database, the query will show the reply otherwise the else statement
+// if user query matched to database query we'll show the reply otherwise it go to else statement
 if(mysqli_num_rows($run_query) > 0){
     //fetching replay from the database according to the user query
     $fetch_data = mysqli_fetch_assoc($run_query);
@@ -79,14 +79,10 @@ if(mysqli_num_rows($run_query) > 0){
   echo $name. ", your total expense is $". $_SESSION['Expense'];
 } elseif (str_contains(strtolower($getMesg), 'total')) {
   echo $name. ", your net-income is $". $_SESSION['total'];
-} elseif (str_contains(strtolower($getMesg, 'net income')) {
-    echo $name. ", your net-income is $". $_SESSION['total'];
 }
 
 else{
     echo "Sorry I didn't understand that! I can help you figure out your income, expense, and net income.";
 }
-
-
 
 ?>

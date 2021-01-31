@@ -61,7 +61,7 @@ session_start();
 								<i class="fas fa-user"></i>
 						</div>
 						<div class="msg-header">
-								<p>Do you want to know your income, expense, and/or total income?</p>
+								<p>Do you want to know your income, expense, and/or net-income?</p>
 						</div>
 				</div>
 		</div>
@@ -100,7 +100,7 @@ session_start();
       </div>
       <?php endif ?>
 
-// INCOME AND EXPENSE DIFFERENT DROPDOWN MENU CREATE
+
       <div id="left-form" class="form fade-in-element">
          <form action="info.php" method="post">
             <div class="radio-group">
@@ -115,6 +115,7 @@ session_start();
             </div>
             <input id="amount" type="number" step="0.01" name="amount" class="input-box" placeholder="Amount" required>
             <input type="text" name="description" class="input-box" placeholder="Description" required>
+						<input type="date" id="start" name="trip-start">
             <div class="select">
                <select name="category" id="format">
                   <option value="">Select Expense Category</option>
