@@ -7,12 +7,7 @@ body{
     background-color: #eae6e6;
 }
 
-.info {
-  margin-top: 300px;
-  margin-left: 30px;
-  position: fixed;
-  font-weight: 50px;
-}
+
 
 .num {
   font-weight: 400;
@@ -34,10 +29,65 @@ body{
       z-index: 7000;
 }
 
-#left-form{
-  margin-left: -5px;
-  margin-top: 150px;
+.signup-page {
+  display: flex;
+  align-items: safe center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 250px;
 }
+
+.bank {
+  margin-left: 150px;
+  width: 210px;
+  flex-direction: column;
+}
+
+.img-info {
+  margin-top: -100px;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+  justify-content: left;
+  word-wrap: break-word;
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.last-line {
+  font-size: 25px;
+  color: #a75d00;
+}
+
+#left-form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+}
+
+.forgot-pass {
+  text-align: center;
+  text-decoration: none;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
 
 .form input {
     min-width: 400px;

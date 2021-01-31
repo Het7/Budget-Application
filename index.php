@@ -83,6 +83,7 @@ session_start();
          <input type="checkbox" id="nav-toggle" class="nav-toggle">
          <nav>
             <ul>
+							 <li><a href="chart.php">Data</a></li>
                <li><a href="logout.php">Logout</a></li>
             </ul>
          </nav>
